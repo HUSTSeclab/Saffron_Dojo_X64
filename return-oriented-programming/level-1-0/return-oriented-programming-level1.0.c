@@ -4,6 +4,7 @@
 #include <sys/stat.h>
 #include <errno.h>
 #include <unistd.h>
+#include "util.h"
 
 #define BUF_LEN 0x40
 #define OOB_LEN 0x80
@@ -17,6 +18,7 @@ void init()
 
 void print_desc()
 {
+	print_image("Haunter", "image.txt");
 	printf("###\n");
 	printf("### Welcome to ./return-oriented-programming-level1.0!\n");
 	printf("###\n");
