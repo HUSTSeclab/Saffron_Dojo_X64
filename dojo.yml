@@ -7,7 +7,7 @@ type: topic
 comparator: 2500
 
 award:
-  belt: Marsh
+  emoji: Marsh
 
 modules:
   - id: shellcode-injection
