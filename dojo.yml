@@ -9,7 +9,7 @@ award:
 
 modules:
   - id: shellcode-injection
-    icon: Onix
+    icon: Abra
 
   - id: return-oriented-programming
-    icon: Geodude
+    icon: Kadabra
