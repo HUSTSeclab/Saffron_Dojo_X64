@@ -6,3 +6,10 @@ type: topic
 
 award:
   belt: Marsh
+
+modules:
+  - id: shellcode-injection
+    icon: Onix
+
+  - id: return-oriented-programming
+    icon: Geodude
