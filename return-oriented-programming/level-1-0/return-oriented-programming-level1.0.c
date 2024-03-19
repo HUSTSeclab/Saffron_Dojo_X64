@@ -20,11 +20,10 @@ void print_desc()
 {
 	print_image("Haunter", "image.txt");
 	printf("###\n");
-	printf("### Welcome to ./return-oriented-programming-level1.0!\n");
+	printf("### If you feel hard to beat this pokemon, please read and study the description.\n");
+	printf("### Or just skip and try other pokemons.\n");
+	printf("### Have fun :)\n");
 	printf("###\n");
-	printf("\n");
-	printf("This challenge will leverage pwntools to bypass some conditions, and then print the flag if successful\n");
-	printf("Enter your input> \n");
 }
 
 void read_flag(char *filename)
