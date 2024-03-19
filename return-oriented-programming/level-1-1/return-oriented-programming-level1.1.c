@@ -12,9 +12,9 @@ void gift()
 {
         // TODO here
         __asm__ __volatile__(
-                "pop rdx; ret;"
-                "pop rax; ret;"
-                "syscall; ret;"
+                "ldp x2, x3, [sp], #16; ret;"
+                "ldp x0, x1, [sp], #16; ret;"
+                "svc 0; ret;"
         );
 }
 
