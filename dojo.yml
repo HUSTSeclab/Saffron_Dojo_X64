@@ -4,6 +4,8 @@ name: 金黄道馆
 
 type: topic
 
+comparator: 2500
+
 award:
   belt: Marsh
 
