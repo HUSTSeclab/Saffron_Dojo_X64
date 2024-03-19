@@ -1,5 +1,3 @@
-// gcc -fno-stack-protector ./ret2shellcode.c -o ret2shellcode
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,5 +1,3 @@
-// gcc -fno-stack-protector -no-pie -masm=intel ./ret2syscall.c -o ret2syscall
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

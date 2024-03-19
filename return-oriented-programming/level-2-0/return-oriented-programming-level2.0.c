@@ -1,5 +1,3 @@
-// gcc -fno-stack-protector -no-pie -masm=intel ./ret2libc_1.c -o ret2libc_1
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

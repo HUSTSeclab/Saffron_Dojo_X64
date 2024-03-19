@@ -1,5 +1,3 @@
-// gcc -fno-stack-protector ./ret2libc_3.c -o ret2libc_3
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
