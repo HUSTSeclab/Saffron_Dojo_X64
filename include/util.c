@@ -1,8 +1,23 @@
 #include "util.h"
+#include <libgen.h>
+#include <limits.h>
 
 static char guess[] = "Guess who I am?\0";
 
-void upper_print_str(char *str)
+void get_dir_path(char *path) {
+        // 获取当前可执行文件的绝对路径
+        int ret = readlink("/proc/self/exe", path, UTIL_MAX_LEN);
+        if (ret < 0) {
+                perror("readlink error");
+                path = NULL;
+                return;
+        }
+
+        path = dirname(path);
+        // printf("Directory is %s\n", path);
+}
+
+void upper_print_str(char * str)
 {
         const int cnt = 60;
         int i, padding, remain = 0;
@@ -35,19 +50,27 @@ void upper_print_str(char *str)
 
 int print_image(char * pokemon_name, char * filename)
 {
-	char read_string[UTIL_MAX_LEN];
-	FILE *fptr = NULL;
+	char read_string[UTIL_MAX_LEN], file_path[UTIL_MAX_LEN];
+	FILE * fptr = NULL;
 
+        get_dir_path(file_path);
+        // get file absolute path
+        if (file_path == NULL) {
+                return -1;
+        }
+        strcat(file_path, "/");
+        strcat(file_path, filename);
+        
         // open pokemon text art file
-	if((fptr = fopen(filename,"r")) == NULL) {
-		fprintf(stderr,"error opening %s\n",filename);
-		return 1;
+	if((fptr = fopen(file_path,"r")) == NULL) {
+		fprintf(stderr, "error opening %s\n", file_path);
+		return -1;
 	}
 
         // print pokemon text art
         upper_print_str(guess);
 	while(fgets(read_string, sizeof(read_string), fptr) != NULL)
-		printf("%s",read_string);
+		printf("%s", read_string);
 	printf("\n");
         
         // print pokemon name

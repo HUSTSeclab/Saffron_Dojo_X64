@@ -1,3 +1,4 @@
 do_make.py
 .gdb_history
 .vscode/settings.json
+.vscode/c_cpp_properties.json
