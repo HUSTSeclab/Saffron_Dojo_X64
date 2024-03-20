@@ -1,9 +1,11 @@
 #include <unistd.h>
 #include <stdio.h>
+#include "util.h"
 
 int main() {
     char buf[0x400];
     int n, i;
+    print_image("Kadabra", "image.txt");
     puts("Do you understand the visible string shellcode?");
     n = read(0, buf, 0x400);
     if (n <= 0) return 0;

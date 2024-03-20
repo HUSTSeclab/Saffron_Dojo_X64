@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <unistd.h>
 #include <stdio.h>
+#include "util.h"
 
 #include <capstone/capstone.h>
 
@@ -68,6 +69,7 @@ int main(int argc, char **argv, char **envp)
     for (char **a = envp; *a != NULL; a++) memset(*a, 0, strlen(*a));
 
     shellcode_mem = mmap((void *) 0x2d2d2000, 0x1000, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANON, 0, 0);
+    print_image("slowbro", "image.txt");
     printf("[LEAK] Mapping shellcode memory at %p!\n", shellcode_mem);
     assert(shellcode_mem == (void *) 0x2d2d2000);
 

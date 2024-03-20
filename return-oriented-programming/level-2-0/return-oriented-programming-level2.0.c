@@ -5,6 +5,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include "util.h"
 
 #define BUF_LEN 0x100
 char *gift_flag = "/flag";
@@ -75,7 +76,7 @@ int main()
         int choice, flag = 1;
 
         init();
-        puts("This is an easy challenge of ret2libc, have fun :)");
+        print_image("Wigglytuff", "image.txt");
 
         while (flag) {
                 /* code */

@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <unistd.h>
 #include <stdio.h>
+#include "util.h"
 
 #include <capstone/capstone.h>
 
@@ -63,7 +64,7 @@ int main(int argc, char **argv, char **envp)
 {
     assert(argc > 0);
 
-    puts("The challenge will read certain bytes and execute them as code.\n");
+    print_image("Gastly", "image.txt");
     for (int i = 3; i < 10000; i++) close(i);
     for (char **a = argv; *a != NULL; a++) memset(*a, 0, strlen(*a));
     for (char **a = envp; *a != NULL; a++) memset(*a, 0, strlen(*a));

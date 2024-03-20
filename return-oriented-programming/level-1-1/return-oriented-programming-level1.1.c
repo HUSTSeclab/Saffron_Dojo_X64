@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "util.h"
 
 #define BUF_LEN 0x100
 char *flag = "/flag\0";
@@ -28,9 +29,7 @@ int main()
         char s[0x10];
 
         init();
-        puts("This is an easy challenge of ret2syscall");
-        puts("Now what can you do without system and shellcode ???");
-        puts("Give me your input");
+        print_image("Furret", "image.txt");
         
         read(0, s, BUF_LEN); // vulnerable read
 

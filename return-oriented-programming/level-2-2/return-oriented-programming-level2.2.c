@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "util.h"
 
 #define BUF_LEN 0x100
 
@@ -56,7 +57,7 @@ int main()
         int choice, flag = 1;
 
         init();
-        puts("This is an easy challenge of ret2libc, have fun :)");
+        print_image("Rapidash", "image.txt");
 
         while (flag) {
                 /* code */

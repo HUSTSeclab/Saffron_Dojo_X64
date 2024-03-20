@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/mman.h>
+#include "util.h"
 
 #define BUF_LEN 0x100
 
@@ -19,8 +20,7 @@ int main()
         char s[BUF_LEN];
 
         init();
-        puts("This is an easy challenge of ret2shellcode");
-        puts("Now what can you do without system ???");
+        print_image("Hypno", "image.txt");
         puts("Give me your input");
         
         scanf("%s", s);        // vulnerable gets
