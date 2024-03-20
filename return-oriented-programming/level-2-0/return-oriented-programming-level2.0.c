@@ -76,7 +76,7 @@ int main()
         int choice, flag = 1;
 
         init();
-        print_image("Wigglytuff", "image.txt");
+        print_desc();
 
         while (flag) {
                 /* code */
@@ -108,7 +108,7 @@ int main()
                 }
         }
         
-        puts("Bye bye~");
+        print_exit();
 
 	return 0;
 }

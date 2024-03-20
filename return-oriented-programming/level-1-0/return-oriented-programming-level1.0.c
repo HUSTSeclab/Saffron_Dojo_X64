@@ -16,16 +16,6 @@ void init()
 	setvbuf(stderr, 0, 2, 0);
 }
 
-void print_desc()
-{
-	print_image("Jynx", "image.txt");
-	printf("###\n");
-	printf("### If you feel hard to beat this pokemon, please read and study the description.\n");
-	printf("### Or just skip and try other pokemons.\n");
-	printf("### Have fun :)\n");
-	printf("###\n");
-}
-
 void read_flag(char *filename)
 {
 	char *p;
@@ -60,6 +50,8 @@ int main()
         printf("Say something at %p\n", buffer);
         printf(">>> ");
 	read(0, buffer, OOB_LEN);
+
+	print_exit();
 
 	return 0;
 }

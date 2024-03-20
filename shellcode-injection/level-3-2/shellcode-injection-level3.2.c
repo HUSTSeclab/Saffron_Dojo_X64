@@ -20,13 +20,13 @@ int main()
         char s[BUF_LEN];
 
         init();
-        print_image("Hypno", "image.txt");
+        print_desc();
         puts("Give me your input");
         
         scanf("%s", s);        // vulnerable gets
         strncpy(buf, s, BUF_LEN);
         
-        puts("Bye bye~");
+        print_exit();
 
 	return 0;
 }

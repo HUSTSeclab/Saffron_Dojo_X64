@@ -29,11 +29,11 @@ int main()
         char s[0x10];
 
         init();
-        print_image("Furret", "image.txt");
+        print_desc();
         
         read(0, s, BUF_LEN); // vulnerable read
 
-        puts("Bye bye~");
+        print_exit();
 
 	return 0;
 }

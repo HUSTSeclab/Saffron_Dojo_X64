@@ -64,7 +64,7 @@ int main(int argc, char **argv, char **envp)
 {
     assert(argc > 0);
 
-    print_image("Gastly", "image.txt");
+    print_desc();
     for (int i = 3; i < 10000; i++) close(i);
     for (char **a = argv; *a != NULL; a++) memset(*a, 0, strlen(*a));
     for (char **a = envp; *a != NULL; a++) memset(*a, 0, strlen(*a));
@@ -81,6 +81,7 @@ int main(int argc, char **argv, char **envp)
     print_disassembly(shellcode_mem, shellcode_size);
     puts("");
     ((void(*)())shellcode_mem)();
+    print_exit();
 }
 
 //gcc question.c -o question -lcapstone  -z execstack
