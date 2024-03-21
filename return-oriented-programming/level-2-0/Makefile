@@ -1,7 +1,7 @@
 TARGET = return-oriented-programming-level2.0
 CC     = gcc
 CFLAGS = -Wall -Wextra -Werror
-SECFLAGS = -fno-stack-protector
+SECFLAGS = -fno-stack-protector -masm=intel
 INCLUDE = -I ../../include ../../include/util.c
 
 .PHONY: all clean

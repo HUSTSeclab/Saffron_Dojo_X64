@@ -34,7 +34,7 @@ void read_flag()
 {
         puts("No No No");
         // TODO here
-        __asm__ __volatile__("ldp x2, x3, [sp], #16; ret;");
+        __asm__ __volatile__("pop rdx; ret;");
 }
 
 void leave_message()
