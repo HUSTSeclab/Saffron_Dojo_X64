@@ -15,6 +15,3 @@ modules:
 
   - id: return-oriented-programming
     icon: Kadabra
-
-  - id: kernel-exploitation
-    icon: Kadabra
